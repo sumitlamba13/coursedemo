@@ -1,7 +1,7 @@
 const express = require('express');
 const router=express.Router();
 const User=require('../../models/User');
-const Video=require('../../models/Videos');
+const Video=require('../../../models/Videos');
 
 router.all('/*',(req,res,next)=>{
   req.app.locals.layout='home';
