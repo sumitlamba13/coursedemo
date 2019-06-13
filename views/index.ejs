@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css "href="/assets/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div class="page-header">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"><img src="/assets/eck-logo.svg"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    <div class="container" style="background-image:linear-gradient(blue,white); text-align:center">
+      <h1 id="title">Introduction to Machine Learning</h1>
+      <h3 id="description">Free certification course of machine Learning</h3>
+      <h3 id="creator">Created By:Ritesh Singh</h3>
+      <h4 id="duration">Course Duration:7 Day</h2>
+      <h1 id="price">Free</h1>
+      <button style="border:'5em'" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Enroll</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog model-lg">
+      <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <div class="card">
+              <div class="card-body">
+                <h1>Choose your Subsciption</h1>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-body bg-danger">
+            <button type="button" data-toggle="modal" class="btn btn-danger" data-target="#loginmodal" style="border:10px">Continue</button>
+          </div>
+      </div>
+    </div>
+    </div>
+    <div class="modal fade" id="loginmodal" role="dialog">
+      <div class="modal-dialog model-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+          </div>
+          <div class="modal-body bg-danger">
+            <form method="post" action="/">
+              <label>Username</label>
+              <input class="form-control" type="text" name="name" placeholder="Please enter username">
+              <br>
+              <label>Email</label>
+              <input class="form-control" type="email" name="email" placeholder="Please enter email">
+              <br>
+              <label>MobileNo</label>
+              <input class="form-control" type="text" name="mobileno" placeholder="Please enter phone number">
+              <br>
+              <button class="btn btn-primary" type="submit">Next</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

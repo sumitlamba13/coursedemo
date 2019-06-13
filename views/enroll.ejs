@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .sidenav {
+        height: 100%;
+        width: 360px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    .main {
+      margin-left: 360px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="#"><img src="/assets/logo.png"></a>
+      <h1 style="color:white"><%=user.username%></h1>
+    </div>
+    <div class="main">
+      <div class="card">
+        <div class="card-body"><h1 style="color:blue">Intro to machine Learning</h1></div>
+      </div>
+        <div class="card" style="width:400px; margin-top:20px">
+         <img class="card-img-top" src="assets/course-logo.png" alt="Card image" style="width:100%">
+         <div class="card-body">
+           <h4 class="card-title">Introduction to Machine Learning</h4>
+           <p class="card-text"></p>
+           <a href="/enroll/videos" class="btn btn-primary">Start Course</a>
+         </div>
+       </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

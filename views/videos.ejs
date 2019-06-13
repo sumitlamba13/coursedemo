@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .sidenav {
+        height: 100%;
+        width: 360px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    .main {
+      margin-left: 360px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+  </script>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="#"><img src="/assets/logo.png"></a>
+      <button class="btn btn-dark" style="margin:30px" onclick="goBack()">Back</button>
+    </div>
+    <div class="main">
+      <div class="card">
+        <div class="card-body"><a href="#"><img src="/assets/course-logo.png"></a>
+          <h1 style="color:blue; float:right">Intro to machine Learning</h1>
+          <div class="progress" style="margin-left:500px;">
+            <div class="progress-bar bg-success" style="width:60%"></div>
+          </div>
+        </div>
+      </div>
+      <% for(i=0;i<video.length;i++){%>
+      <div class="accordian">
+      <div class="card">
+        <div class="card-header" id="header<%=i%>">
+          <h2>
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%=i%>" aria-expanded="true" aria-controls="collapse<%=i%>">
+              <%= video[i].topic%>
+            </button>
+          </h2>
+        </div>
+        <%for(j=0;j<video[i].subtopic.length;j++){%>
+        <div id="collapse<%=i%>" class="collapse show" aria-labelledby="heading<%=i%>" data-parent="#accordion">
+          <div class="card-body">
+            <a class="btn btn-primary" href="/enroll/videos/<%=video[i].topic%>/<%=j%>"><%= video[i].subtopic[j].subtopicname%></a>
+            <span style="float:right" ><%= video[i].subtopic[j].subtopicduration%></span>
+          </div>
+        </div>
+        <%}%>
+      </div>
+      </div>
+      <%}%>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
