@@ -2,7 +2,7 @@ const express = require('express');
 const app=express();
 const router=express.Router();
 const User=require('../../models/User');
-const Video=require('../../models/Videos');
+const Video=require('../../models/videos');
 const insta = require('instamojo-nodejs');
 router.all('/*',(req,res,next)=>{
   req.app.locals.layout='home';
@@ -22,32 +22,6 @@ router.get('/payment',(req,res)=>{
 });
 
 
-router.post('/payment',(req,res)=>{
-  Insta.setKeys(test_1249dcff7683c9c6d1306d44abc, test_3ce3ebf8ce7cb814588a0ca472b);
-  var data = new Insta.PaymentData();
-  Insta.isSandboxMode(true);
-  data.purpose=req.body.purpose;
-  data.amount=req.body.amount;
-  data.buyer_name=req.body.buyer_name;
-  data.redirect_url=req.body.redirect_url;
-  data.email=req.body.email;
-  data.phone=req.body.phone;
-  data.send_mail=false;
-  data.webhook='http://www.example.com/webhook';
-  data.send_sms=false;
-  data.allow_repeated_payments=false;
-  Insta.createPayment(data, function(error, response) {
-    if (error) {
-      // some error
-    } else {
-      // Payment redirection link at response.payment_request.longurl
-      console.log(response);
-      const reponse_data=JSON.parse(response);
-      const redirectUrl=reponse_data.payment_request.longurl;
-      res.status(200).json(redirectUrl);
-    }
-  });
-});
 
 router.get('/enroll/videos',(req,res)=>{
   Video.find({}).then(video=>{
