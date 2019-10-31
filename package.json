@@ -18,7 +18,7 @@
     "express-session": "^1.16.1",
     "flash-messages": "0.0.4",
     "instamojo-nodejs": "0.0.5",
-    "mongoose": "^5.5.14",
+    "mongoose": "^5.7.5",
     "mongoose-url-slugs": "^1.0.2"
   }
 }
